@@ -12,7 +12,7 @@ The Runge-Kutta Order 4 (RK4) universal solver on EMA oq1 is intended to interpr
 
 The application of models at the forecasting stage such as predicting fluid and atmospheric dynamics (for example Jet-stream) in real-time:RK4 is very capable of modeling fluid and atmospheric dynamics such as the Navier-Stokes equations approach. Wind and rainfall considerations move in continuous space, The capabilities of ANODE integrated with RK4 are far superior to discrete time series models such as LSTM or standard Transformers in handling sparse data or irregular (irregular sampled data)
 
-#### Weaknesses and Challenges
+### Weaknesses and Challenges
 
 Wind and weather have physical noise (turbulence), but still obey the sequential laws of thermodynamics. Let's take the example of the difference with the stock market, whose movements are...This is also driven by human psychology, which is often extremely non-linear. Therefore, RK4 will perform much more stably and precisely in its predictions, generally speaking, sequentially.
 
@@ -285,9 +285,9 @@ beneficial ∆ in RMSE/NLL and adding augment/probabilistic option
 model:
   type: augmented_ode
   base: neuralode
-  state_dim: 8
+  state_dim: 16
   hidden_dim: 128
-  augment_dim: 4
+  augment_dim: 16
 
 train:
   lr: 1e-3
